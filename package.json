@@ -1,0 +1,10 @@
+{
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "yarn workspaces foreach -pi run dev"
+  }
+}
