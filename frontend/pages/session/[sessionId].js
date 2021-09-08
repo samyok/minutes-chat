@@ -11,10 +11,11 @@ export default function Home({ websocketURL }) {
     const [websocket, setWebsocket] = useState(null);
     const [people, setPeople] = useState([]);
     const [messages, setMessages] = useState([]);
-    const router = useRouter();
-    const { sessionId } = router.query;
     const [messageInput, setMessageInput] = useState('');
     const bottomOfChat = useRef(null);
+
+    const router = useRouter();
+    const { sessionId } = router.query;
 
     useEffect(() => {
         if (!sessionId) return;

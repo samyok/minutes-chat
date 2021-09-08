@@ -6,7 +6,7 @@ module.exports = async (req, res) => {
     let waitTime = req.query.wait ?? 0;
     let url = getAbsoluteURL(req.query.url);
 
-    if (cacheData.get(url)) {
+    if (cacheData.get(req.originalUrl)) {
         res.setHeader('Cache-Control', 's-maxage=31536000, stale-while-revalidate');
         res.setHeader('Content-Type', 'image/png');
         res.setHeader('X-Memcache-Status', 'HIT');
@@ -31,7 +31,7 @@ module.exports = async (req, res) => {
             res.setHeader('Content-Type', 'image/png');
             res.setHeader('X-Memcache-Status', 'MISS');
             res.status(200).send(screenshot);
-            cacheData.put(url, screenshot, 7 * 24 * 1000 * 60 * 60); // cache for a week
+            cacheData.put(req.originalUrl, screenshot, 7 * 24 * 1000 * 60 * 60); // cache for a week
         } else throw 'Please provide a valid url';
     } catch (error) {
         console.log(error);
