@@ -13,7 +13,7 @@ export default function Home() {
 
             <main className={styles.main}>
                 <h1>Minutes</h1>
-                <p>Like Hours. But smaller.</p>
+                <p>Like Hours. But smaller. And just a chat room.</p>
 
                 <Link href={'/session/'}>
                     <a className={[styles.btn, styles.primary].join(" ")}>
