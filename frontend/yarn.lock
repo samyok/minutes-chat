@@ -2249,8 +2249,8 @@ __metadata:
     next-cli: ^1.0.0
     playwright-aws-lambda: ^0.7.0
     playwright-core: ^1.14.1
-    react: 17.0.2
-    react-dom: 17.0.2
+    react: ^17.0.2
+    react-dom: ^17.0.2
     sass: ^1.39.0
     snappy: ^7.0.3
     socket.io-client: ^4.2.0
@@ -4324,7 +4324,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:17.0.2":
+"react-dom@npm:^17.0.2":
   version: 17.0.2
   resolution: "react-dom@npm:17.0.2"
   dependencies:
@@ -4358,7 +4358,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:17.0.2":
+"react@npm:^17.0.2":
   version: 17.0.2
   resolution: "react@npm:17.0.2"
   dependencies:
