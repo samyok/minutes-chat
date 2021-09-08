@@ -1,0 +1,59 @@
+@use 'foundation/colors';
+@use 'foundation/card';
+@use 'foundation/buttons';
+@use 'foundation/input';
+
+.main {
+  margin: auto;
+  width: 100%;
+  min-height: 100vh;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn.inputRight {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.input.inputLeft {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  flex-grow: 1;
+  width: 100px;
+  text-align: left;
+}
+
+.inputContainer {
+  display: flex;
+}
+
+.cardBody {
+  text-align: left;
+  max-height: 45vh;
+  overflow-y: auto;
+}
+
+.chat {
+
+  p {
+    margin: 3px 0;
+    padding: 0;
+
+    .chatAuthor {
+      font-weight: bold;
+      color: rgba(colors.$red, 0.9);
+    }
+  }
+
+  .systemMessage {
+    color: rgba(colors.$red, 0.5);
+    margin: 8px 0;
+  }
+}

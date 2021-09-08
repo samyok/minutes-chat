@@ -1,0 +1,48 @@
+@use 'colors';
+
+
+.card {
+
+  $border: 1px solid colors.$red;
+  $padding: 20px 25px 20px 25px;
+  $borderRadius: 10px;
+  text-align: center;
+  width: 900px;
+  max-width: 98vw;
+  margin-top: 20px;
+
+  .cardHeader {
+    border-top-left-radius: $borderRadius;
+    border-top-right-radius: $borderRadius;
+    border-left: $border;
+    border-right: $border;
+    border-top: $border;
+    padding: $padding;
+    background: rgba(colors.$red, .15);
+    font-weight: bold;
+    font-size: 20px;
+    color: colors.$red
+  }
+
+  .cardBody {
+    padding: $padding;
+    padding-bottom: 0;
+    border-right: $border;
+    border-left: $border;
+    background: rgba(colors.$red, .05);
+  }
+
+  .cardFooter {
+    padding: $padding;
+    border-bottom-left-radius: $borderRadius;
+    border-bottom-right-radius: $borderRadius;
+    border-left: $border;
+    border-right: $border;
+    border-bottom: $border;
+    background: rgba(colors.$red, 0.05);
+  }
+
+  input {
+    text-align: center;
+  }
+}

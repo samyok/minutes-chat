@@ -1,0 +1,31 @@
+@use 'colors';
+
+.btn {
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  font-size: 20px;
+  border-radius: 5px;
+  transition-duration: 250ms;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: rgba(0,0,0,0.1) !important;
+  }
+
+}
+
+.btn.primary {
+  background-color: colors.$red;
+
+}
